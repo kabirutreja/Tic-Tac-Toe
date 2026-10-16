@@ -189,15 +189,15 @@ function makeComputerMove() {
 function findWinningMove(player) {
     for (var i = 0; i < cells.length; i++) {
 
-        // Only test empty squares
+        
         if (cells[i].textContent === "") {
 
-            // Temporarily try this move
+            
             cells[i].textContent = player;
 
             var winningMove = checkWinner(player);
 
-            // Undo the test move
+           
             cells[i].textContent = "";
 
             if (winningMove) {
